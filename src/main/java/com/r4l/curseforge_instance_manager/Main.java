@@ -19,8 +19,8 @@ public class Main {
 		
 		while(keepAlive) {
 			System.out.println("1) Copy Instance to Minecraft");
-			System.out.println("1) Copy Minecraft to Instance");
-			System.out.println("2) Exit");
+			System.out.println("2) Copy Minecraft to Instance");
+			System.out.println("3) Exit");
 			int input = scanner.nextInt();
 			
 			switch(input) {
@@ -39,9 +39,10 @@ public class Main {
             	Path instance1 = getInstance(scanner, fm);
             	
             	System.out.println("\nSelected " + instance1.toString() + "\n");
-            	fm.copyInstance(instance1);
+            	fm.copyToInstance(instance1);
             	System.out.println("\nAn Instance has been updated!\n");
-                
+            	break;
+            	
             case 3:
                 System.out.println("\nExiting...\n");
                 keepAlive = false;
